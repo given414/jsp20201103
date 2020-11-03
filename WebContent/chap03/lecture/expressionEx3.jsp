@@ -21,13 +21,24 @@ while (lotto.size() < 6) {
 
 %>
 <ul>
-
-<li>
 <%
-
+for (Integer i : lotto) {
 %>
-</li>
-
+<li><%= i %></li>
+<%
+}
+%>
 </ul>
+
+<hr />
+<ul>
+<%
+for (Integer i : lotto) {
+	out.print("<li>" + i + "</li>");
+}
+%>
+</ul>
+
+
 </body>
 </html>
