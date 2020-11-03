@@ -35,14 +35,15 @@ out.print("</h2>");
 %>
 
 <%
-if(i>0){
-out.print("<h3>");
-out.print("i가 0보다 크다");
-out.print("</h3>");
+if (i > 0) {
+ out.print("<h3>");
+ out.print("i가 0보다 크다");
+ out.print("</h3>");
 } else {
-out.print("<h3>");
-out.print("i가 0보다 작다");
-out.print("</h3>");
+ out.print("<h3>");
+ out.print("i가 0보다 작다");
+ out.print("</h3>");
+}
 %>
 </body>
 </html>
