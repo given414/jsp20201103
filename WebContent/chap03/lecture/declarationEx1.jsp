@@ -36,8 +36,8 @@ static void mymethod2() {
 
 <h1>Lorem ipsum dolor.</h1>
 
+<% mymethod2(); %>
 <% this.mymethod(); %>
 
-<% mymethod2(); %>
 </body>
 </html>

@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<form action = "/chap03/viewParameter.jsp" method="post">
+<form action ="/myjsp/chap03/viewParameter.jsp" method="post">
 이름: <input type="text" name="name" size="10" />
 주소: <input type="text" name= "address" size= "30" />
 좋아하는 동물:
