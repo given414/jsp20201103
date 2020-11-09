@@ -13,6 +13,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-attr1 : <%=  %>
+attr1 : <%= request.getAttribute("attr1") %>
+<br />
+attr2 : <%= session.getAttribute("attr2")  %>
 </body>
 </html>
