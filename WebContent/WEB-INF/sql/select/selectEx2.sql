@@ -116,6 +116,30 @@ from employee
 where dno in (20,30)
 order by ename;
 
+select ename, salary, dno from employee
+where salary between 2000 and 3000
+and dno in (20,30)
+order by ename;
+
+select ename, hiredate 
+from employee
+WHERE hiredate like '81%';
+
+select ename, job
+from employee
+where manager is null;
+
+select ename, salary, commission
+from   employee
+where commission is not null
+order by salary, commission;
+
+select ename from employee
+where ename like '__A%';
+
+select ename from employee
+where ename like '%A%' and ename like '%E%';
+
 SELECT ename, job, salary
 from employee
 where job in ('CLERK', 'SALESMAN')
