@@ -1,3 +1,4 @@
+--date to char
 SELECT TO_CHAR(sysdate) FROM dual;
 SELECT TO_CHAR(sysdate, 'YYYY') FROM dual;
 SELECT TO_CHAR(sysdate, 'YY') FROM dual;
