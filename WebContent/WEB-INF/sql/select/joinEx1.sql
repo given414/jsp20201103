@@ -84,7 +84,7 @@ where e.eno= 7788;
 SELECT e.eno, e.ename, d.dname, e.dno
 from employee e join department d
 on e.dno = d.dno
-where e.eno 7788;
+where e.eno = 7788;
 
 
 
