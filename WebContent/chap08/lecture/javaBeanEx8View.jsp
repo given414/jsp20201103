@@ -3,14 +3,15 @@
 <%@ page import = "java.util.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
 <jsp:useBean id="car" class="chap08.Car"></jsp:useBean>
-
-<%-- <jsp:setProperty name="car" property="name" param="name"/>
-<jsp:setProperty name="car" property="speed" param="speed"/> --%>
-
-<%-- <jsp:setProperty name="car" property="name" />
-<jsp:setProperty name="car" property="speed" /> --%>
-
-jsp:setProperty name="car" 
+<%-- 
+<jsp:setProperty name="car" property="name" param="name"/>
+<jsp:setProperty name="car" property="speed" param="speed"/> 
+--%>
+<%-- 
+<jsp:setProperty name="car" property="name" />
+<jsp:setProperty name="car" property="speed" />
+--%>
+<jsp:setProperty name="car" property="*" /> 
 
 <!DOCTYPE html>
 <html>
@@ -23,6 +24,8 @@ jsp:setProperty name="car"
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:getProperty  />
+<jsp:getProperty property = "name" name = "car" /> <br />
+<jsp:getProperty property = "speed" name = "car" /> <br /> 
 </body>
 </html>
+
