@@ -14,6 +14,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+id, pw 등록 가능 : ${ok }
 </body>
 </html>
