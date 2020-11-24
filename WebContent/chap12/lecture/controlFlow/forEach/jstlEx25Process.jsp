@@ -20,6 +20,5 @@ if(list==null) {
 }
 
 list.add(post);
-
 response.sendRedirect("jstlEx25.jsp");
 %>

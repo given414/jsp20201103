@@ -16,7 +16,7 @@
 <body>
 <h1>방명록</h1>
 
-<form action = "jstlEx25Detail.jsp" method="post">
+<form action = "jstlEx25Process.jsp" method="post">
 제목: <input type="text" name = "title" />
 <br />
 <textarea name="body" cols="30" rows="3"></textarea>
@@ -30,8 +30,12 @@
 
 <c:if test= "${not empty list }">
 <ul>
- <c:forEach items="${list }" var= "item">
- 	<li>${item.title }</li>
+ <c:forEach items="${list }" var= "item" varStatus="stat">
+ 	<li>
+ 	<a href="jstlEx25Detail.jsp?id=${stat.index }">
+ 	${item.title }
+ 	</a>
+ 	</li>
  </c:forEach>
 </ul>
 </c:if>

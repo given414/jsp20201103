@@ -1,16 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ page import= "java.util.*" %>
-    <%@ page import= "chap05.Post" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <% request.setCharacterEncoding("utf-8"); %>
-    <%
-    String id = request.getParameter("id");
-    int i = Integer.parseInt(id);
-    
-    List<Post> list = (List<Post>)application.getAttribute("list");
-    Post post = list.get(i);
-    %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,10 +14,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-제목 : <input type="text" value = "${post.title }" readonly  />
+제목 : 
+<input type="text" value = "${list[param.id].title }" readonly  />
 <br />
-<textarea cols="30" rows="10" readonly>${post.Body }</textarea>
-<br />
-<a href="jstlEx25.jsp">게시글 작성</a> 
+<textarea cols="30" rows="3" readonly>${list[param.id].body }</textarea>
+<hr />
+
+<pre>
+<c:out value="${list[param.id].body }" />
+</pre>
 </body>
 </html>
+
+
+
+
+
+
