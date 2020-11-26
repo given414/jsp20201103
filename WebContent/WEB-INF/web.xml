@@ -26,4 +26,13 @@
   	<param-value>5</param-value>
   </context-param>
   
+  <servlet>
+  	<servlet-name>servlet01</servlet-name>
+  	<servlet-class>chap17.ServletEx01</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servlet01</servlet-name>
+  	<url-pattern>/ex011</url-pattern>
+  </servlet-mapping>
 </web-app>
