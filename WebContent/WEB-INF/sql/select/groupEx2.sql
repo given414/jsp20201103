@@ -6,10 +6,10 @@ Select MAX(salary) FROM employee;
 SELECT MAX(salary) FROM employee
 GROUP BY job;
 
-Select dno as "ºÎ¼­ ¹øÈ£", avg(salary) as "±Þ¿© Æò±Õ"
+Select dno as "ï¿½Î¼ï¿½ ï¿½ï¿½È£", avg(salary) as "ï¿½Þ¿ï¿½ ï¿½ï¿½ï¿½"
 FROM employee group by dno;
 
-select avg(salary) as "±Þ¿© Æò±Õ"
+select avg(salary) as "ï¿½Þ¿ï¿½ ï¿½ï¿½ï¿½"
 from employee
 group by dno;
 
@@ -25,7 +25,7 @@ order by dno, job;
 SELECT job, avg(salary) FROM employee
 GROUP BY job;
 
--- ±×·ìÇÔ¼ö´Â where¿¡¼­ ºÒ°¡
+-- ï¿½×·ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ whereï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½
 SELECT job, avg(salary) fROm employee
 WHERE avg(salary) >= 3000
 GROUP BY job;
@@ -50,7 +50,7 @@ select max(avg(salary))
 from employee
 group by dno;
 
---È¥ÀÚ ÇØº¸±â
+--È¥ï¿½ï¿½ ï¿½Øºï¿½ï¿½ï¿½
 SELECT MAX(salary) as "Maximum",
        MIN(salary) as "Minimum",
        SUM(salary) as "Sum",
@@ -103,12 +103,14 @@ SELECT decode(dno, 10, 'ACCOUNTING',
       group by dno;
       
 SELECT job, dno,
-        decode(dno, 10, sum(salary))as "ºÎ¼­ 10",
-        decode(dno, 20, sum(salary)) as "ºÎ¼­ 20",
-        decode(dno, 30, sum(salary)) as "ºÎ¼­ 30",
-        sum(salary) as "ÃÑ¾×"
+        decode(dno, 10, sum(salary))as "ï¿½Î¼ï¿½ 10",
+        decode(dno, 20, sum(salary)) as "ï¿½Î¼ï¿½ 20",
+        decode(dno, 30, sum(salary)) as "ï¿½Î¼ï¿½ 30",
+        sum(salary) as "ï¿½Ñ¾ï¿½"
         from employee
         group by job, dno
         order by dno;
-      
+SELECT
+    *
+FROM department;
 
